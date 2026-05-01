@@ -3,7 +3,7 @@ import React from 'react';
 import { 
   ChevronLeft, Smartphone, BarChart3, Tv, Lightbulb, 
   GraduationCap, Globe, ShieldCheck, Mail, Send,
-  ArrowRight, Sparkles, Zap
+  ArrowRight, Sparkles, Zap, ChevronRight
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
