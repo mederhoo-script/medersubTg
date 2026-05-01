@@ -1,7 +1,7 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import { updateSession } from '@/utils/supabase/middleware'
 
-export default async function middleware(request: NextRequest) {
+export default async function proxy(request: NextRequest) {
     if (request.nextUrl.pathname === '/') {
         return NextResponse.redirect(new URL('/login', request.url))
     }
