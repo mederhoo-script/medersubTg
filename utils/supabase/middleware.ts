@@ -8,9 +8,22 @@ export async function updateSession(request: NextRequest) {
         },
     })
 
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+    if (!supabaseUrl || !supabaseAnonKey) {
+        console.error('ERROR: Missing Supabase environment variables!');
+        console.error('NEXT_PUBLIC_SUPABASE_URL:', supabaseUrl ? 'Defined' : 'MISSING');
+        console.error('NEXT_PUBLIC_SUPABASE_ANON_KEY:', supabaseAnonKey ? 'Defined' : 'MISSING');
+        
+        // Return response as is to avoid crashing the whole site if possible, 
+        // but since this is middleware for auth, we might need to redirect to an error page.
+        return response;
+    }
+
     const supabase = createServerClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+        supabaseUrl,
+        supabaseAnonKey,
         {
             cookies: {
                 getAll() {

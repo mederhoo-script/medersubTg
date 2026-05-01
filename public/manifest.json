@@ -1,11 +1,18 @@
 {
-  "name": "MEDERSUB VTU",
+  "id": "/",
+  "name": "MederSub — VTU Platform",
   "short_name": "MederSub",
-  "description": "Secure Instant Top-up Platform",
-  "start_url": "/",
+  "description": "Buy Airtime, Data, Pay Cable TV & Electricity Bills instantly. Fast, secure & reliable.",
+  "start_url": "/dashboard",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#059669",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "portrait",
+  "background_color": "#0a0e1a",
+  "theme_color": "#6366f1",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["finance", "utilities"],
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
@@ -30,6 +37,33 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
     }
-  ]
+  ],
+  "shortcuts": [
+    {
+      "name": "Buy Airtime",
+      "short_name": "Airtime",
+      "url": "/dashboard/airtime",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Buy Data",
+      "short_name": "Data",
+      "url": "/dashboard/data",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Fund Wallet",
+      "short_name": "Fund",
+      "url": "/dashboard/fund",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "prefer_related_applications": false
 }
