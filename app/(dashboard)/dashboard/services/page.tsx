@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { 
-  ChevronLeft, Smartphone, BarChart3, Tv, Lightbulb, 
+  ChevronLeft, ChevronRight, Smartphone, BarChart3, Tv, Lightbulb, 
   GraduationCap, Globe, ShieldCheck, Mail, Send,
   ArrowRight, Sparkles, Zap, ChevronRight
 } from 'lucide-react';

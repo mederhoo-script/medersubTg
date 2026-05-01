@@ -4,7 +4,7 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 if (!supabaseUrl || !supabaseAnonKey) {
-    console.warn('Supabase URL or Anon Key is missing. Client-side database features may not work.')
+    throw new Error('CRITICAL: Missing Supabase URL or Anon Key in lib/supabase.ts')
 }
 
 // Client for public access (optional, if needed for client-side)
